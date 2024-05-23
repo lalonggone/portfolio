@@ -2,7 +2,7 @@
     <section class="home-section">
       <div class="home-content">
         <h1>Howdy! I'm Laura.</h1>
-        <p>I'm a passionate software developer specializing in .. blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et ante tincidunt aliquam. "You only yolo once".</p>
+        <p>I'm a passionate space cowgirl software developer specializing in .. blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et ante tincidunt aliquam. "You only yolo once".</p>
         <div class="skills-container">
           <h2>My Skills</h2>
           <ul class="skills-list">

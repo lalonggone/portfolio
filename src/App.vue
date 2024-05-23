@@ -1,5 +1,5 @@
 <template>
-  <div :class="themeClass" id="app">
+  <div id="app">
     <Header @toggle-theme="toggleTheme" />
     <main id="content">
       <section id="home">
@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, ref, computed, watch } from 'vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import HomeSection from './components/HomeSection.vue';
@@ -47,12 +47,21 @@ export default defineComponent({
 
     const themeClass = computed(() => (isDarkMode.value ? 'dark-mode' : 'light-mode'));
 
+    watch(themeClass, (newClass, oldClass) => {
+      document.body.classList.remove(oldClass);
+      document.body.classList.add(newClass);
+    });
+
     return { toggleTheme, themeClass };
   }
 });
 </script>
 
 <style>
+
+html {
+  scroll-behavior: smooth;
+}
 #app {
   max-width: 1200px;
   margin: 0 auto;
@@ -60,7 +69,7 @@ export default defineComponent({
 }
 
 .light-mode {
-  --bg-color: #fff;
+  --bg-color: #ffffff;
   --text-color: #000;
   --header-bg-color: #f0f0f0;
   --footer-bg-color: #f0f0f0;
@@ -82,7 +91,13 @@ header, footer {
   color: var(--text-color);
 }
 
-body {
+
+body.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
