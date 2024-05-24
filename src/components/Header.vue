@@ -6,29 +6,46 @@
     </div>
     <nav class="header-nav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">projects</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
       </ul>
     </nav>
-    <div class="theme-toggle">
-      <input type="checkbox" id="theme-switch" @change="toggleTheme" />
-      <label for="theme-switch" class="theme-label">Toggle Theme</label>
-    </div>
+      <v-switch
+      v-model="localIsDarkMode"
+      @change="emitToggleTheme"
+      color="black"
+      label="dark"
+      hide-details
+      inset
+    ></v-switch>
   </header>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
   name: 'Header',
-  methods: {
-    toggleTheme(event: Event) {
-      const checked = (event.target as HTMLInputElement).checked;
-      this.$emit('toggle-theme', checked);
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      required: true,
     }
+  },
+  setup(props, { emit }) {
+    const localIsDarkMode = ref(props.isDarkMode);
+
+    const emitToggleTheme = () => {
+      emit('update:isDarkMode', localIsDarkMode.value);
+    };
+
+    watch(() => props.isDarkMode, (newVal) => {
+      localIsDarkMode.value = newVal;
+    });
+
+    return { localIsDarkMode, emitToggleTheme };
   }
 });
 </script>
@@ -57,8 +74,7 @@ export default defineComponent({
 
 .header-name {
   color: var(--text-color);
-  font-size: 20px;
-  font-family: 'Arial', sans-serif;
+  font-size: 26px;
 }
 
 .header-nav .nav-list {
@@ -95,4 +111,5 @@ export default defineComponent({
 .theme-label {
   color: var(--text-color);
 }
+
 </style>
