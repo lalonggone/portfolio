@@ -23,39 +23,39 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
   padding: 20px;
   text-align: center;
-}
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
-.footer-link {
-  color: var(--footer-text-color);
-  text-decoration: none;
-}
+    .footer-link {
+      color: var(--footer-text-color);
+      text-decoration: none;
+    }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
 
-.social-link {
-  color: var(--footer-text-color);
-  margin: 0 10px;
-  text-decoration: none;
-}
+      .social-link {
+        color: var(--footer-text-color);
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    }
 
-.footer-text {
-  font-size: 0.8rem;
+    .footer-text {
+      font-size: 0.8rem;
+    }
+  }
 }
 </style>

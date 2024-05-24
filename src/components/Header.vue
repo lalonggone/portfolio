@@ -6,7 +6,7 @@
     </div>
     <nav class="header-nav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+        <!-- <li class="nav-item"><a href="#home" class="nav-link">home</a></li> -->
         <li class="nav-item"><a href="#projects" class="nav-link">projects</a></li>
         <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
@@ -50,7 +50,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   position: sticky;
   top: 0;
@@ -59,57 +59,60 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-}
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
+  .logo-container {
+    display: flex;
+    align-items: center;
 
-.logo {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
-}
+    .logo {
+      width: 40px;
+      height: auto;
+      margin-right: 10px;
+    }
 
-.header-name {
-  color: var(--text-color);
-  font-size: 26px;
-}
+    .header-name {
+      color: var(--text-color);
+      font-size: 26px;
+    }
+  }
 
-.header-nav .nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
+  .header-nav {
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
 
-.nav-item {
-  padding: 20px;
-}
+      .nav-item {
+        padding: 20px;
 
-.nav-link {
-  text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.3s;
-}
+        .nav-link {
+          text-decoration: none;
+          color: var(--text-color);
+          transition: color 0.3s;
 
-.nav-link:hover, .nav-link:focus {
-  color: #aaa;
-}
+          &:hover,
+          &:focus {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
 
-.theme-toggle {
-  display: flex;
-  align-items: center;
-}
+  .theme-toggle {
+    display: flex;
+    align-items: center;
 
-#theme-switch {
-  margin-right: 10px;
-}
+    #theme-switch {
+      margin-right: 10px;
+    }
 
-.theme-label {
-  color: var(--text-color);
+    .theme-label {
+      color: var(--text-color);
+    }
+  }
 }
-
 </style>
+

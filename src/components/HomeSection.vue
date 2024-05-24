@@ -31,56 +31,55 @@
   });
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
   .home-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-  }
   
-  .home-content {
-    flex: 1;
-    margin-right: 20px;
-  }
+    .home-content {
+      flex: 1;
+      margin-right: 20px;
   
-  .home-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
+      .home-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
   
-  .skills-container {
-    margin-top: 20px;
-  }
+      .skills-container {
+        margin-top: 20px;
   
-  .skills-list {
-    list-style-type: none;
-    padding: 0;
-  }
+        .skills-list {
+          list-style-type: none;
+          padding: 0;
   
-  .skills-list li {
-    padding: 5px 0; 
-  }
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
   
-  .btn-see-my-work {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #7a4caf;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
+      .btn-see-my-work {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #7a4caf;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
   
-  .home-image {
-    flex: 1;
-  }
+    .home-image {
+      flex: 1;
   
-  .home-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #ccc;
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+      }
+    }
   }
   </style>
-  
