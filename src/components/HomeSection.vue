@@ -44,7 +44,7 @@
   
       .home-title {
         font-size: 2.5rem;
-        margin-bottom: 20px;
+        margin: 0;
       }
   
       .skills-container {
@@ -75,8 +75,7 @@
       flex: 1;
   
       img {
-        max-width: 100%;
-        height: auto;
+        width: 80%;
         border-radius: 10px;
         border: 2px solid #ccc;
       }

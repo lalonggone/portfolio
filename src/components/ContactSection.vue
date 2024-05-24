@@ -1,21 +1,21 @@
 <template>
   <div class="contact-section">
-    <h1>Contact Me</h1>
-    <p>Call me beep me if you wanna reach me! JK - just fill out the form below.</p>
+    <h1>drop me a line</h1>
+    <p>call me beep me if you wanna reach me! or just fill out this form :)</p>
     <form @submit.prevent="submitForm">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">name</label>
         <input type="text" id="name" v-model="form.name" required />
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">email</label>
         <input type="email" id="email" v-model="form.email" required />
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
+        <label for="message">message</label>
         <textarea id="message" v-model="form.message" required></textarea>
       </div>
-      <button className="btn-submit" type="submit">Send Message</button>
+      <button className="btn-submit" type="submit">send it</button>
     </form>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default defineComponent({
       message: ''
     });
 
-    const submitForm = () => {
+    function submitForm() {
       console.log('Form submitted:', form.value);
       form.value = {
         name: '',
@@ -53,13 +53,13 @@ export default defineComponent({
 .contact-section {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
   background-color: var(--bg-color);
   color: var(--text-color);
   border-radius: 8px;
 
   h1 {
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
     font-size: 2em;
   }
 
