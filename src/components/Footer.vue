@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <a href="#home" class="footer-link">Back to Top</a>
+      <a @click="scrollToTop" class="scroll-to-top">take me back to the top</a>
       <div class="social-links">
         <a href="https://github.com/lalonggone" target="_blank" class="social-link">GitHub</a>
         <a href="https://linkedin.com/in/lalonggone" target="_blank" class="social-link">LinkedIn</a>
@@ -18,7 +18,14 @@ export default defineComponent({
   name: 'Footer',
   setup() {
     const currentYear = computed(() => new Date().getFullYear());
-    return { currentYear };
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    return { currentYear, scrollToTop };
   }
 });
 </script>
@@ -36,9 +43,15 @@ export default defineComponent({
     align-items: center;
     gap: 10px;
 
-    .footer-link {
+    .scroll-to-top {
       color: var(--footer-text-color);
       text-decoration: none;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: #aaa;
+      }
     }
 
     .social-links {

@@ -1,7 +1,6 @@
 <template>
   <div class="contact-section">
     <h1>drop me a line</h1>
-    <p>call me beep me if you wanna reach me! or just fill out this form :)</p>
     <form @submit.prevent="submitForm">
       <div class="form-group">
         <label for="name">name</label>

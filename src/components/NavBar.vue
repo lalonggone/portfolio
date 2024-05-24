@@ -89,7 +89,7 @@ export default defineComponent({
 
     .header-name {
       color: var(--text-color);
-      transition: color 0.5s;
+      transition: color .5s;
       font-size: 26px;
     }
   }

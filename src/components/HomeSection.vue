@@ -8,10 +8,11 @@
           <ul class="skills-list">
             <li>JavaScript</li>
             <li>React.js</li>
-            <li>PostgressQL</li>
+            <li>PostgreSQL</li>
             <li>Vue.js</li>
             <li>TypeScript</li>
             <li>HTML & CSS</li>
+            <li>SCSS</li>
             <li>Node.js</li>
           </ul>
         </div>
