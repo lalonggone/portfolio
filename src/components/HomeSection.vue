@@ -1,7 +1,7 @@
 <template>
     <section class="home-section">
       <div class="home-content">
-        <h1>Howdy! I'm Laura.</h1>
+        <h1 class="home-title">Howdy! I'm Laura.</h1>
         <p>I'm a passionate space cowgirl software developer specializing in .. blah blah blah... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et ante tincidunt aliquam. "You only yolo once".</p>
         <div class="skills-container">
           <h2>My Skills</h2>
@@ -42,6 +42,11 @@
   .home-content {
     flex: 1;
     margin-right: 20px;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
   
   .skills-container {
