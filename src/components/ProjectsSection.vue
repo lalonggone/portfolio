@@ -1,6 +1,6 @@
 <template>
     <section class="projects-section">
-        <h1 class="projects-title">projects</h1>
+        <h1 class="projects-title"> </h1>
         <div class="projects-grid">
             <div class="project-card" v-for="project in projects" :key="project.id">
                 <img :src="project.image" :alt="project.title" class="project-image" />

@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <Header :isDarkMode="isDarkMode" @update:isDarkMode="toggleTheme" />
-    <main id="content">
       <section id="home">
-        <HomeSection />
+        <SimpleExample />
       </section>
       <section id="projects">
         <ProjectsSection />
@@ -14,7 +13,6 @@
       <section id="contact">
         <ContactSection />
       </section>
-    </main>
     <Footer />
   </div>
 </template>
@@ -23,7 +21,7 @@
 import { defineComponent, ref, computed, watch, onMounted } from 'vue';
 import Header from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
-import HomeSection from './components/HomeSection.vue';
+import SimpleExample from './components/SimpleExample.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import AboutSection from './components/AboutSection.vue';
 import ContactSection from './components/ContactSection.vue';
@@ -33,7 +31,7 @@ export default defineComponent({
   components: {
     Header,
     Footer,
-    HomeSection,
+    SimpleExample,
     ProjectsSection,
     AboutSection,
     ContactSection
@@ -73,13 +71,6 @@ html {
   font-family: Montserrat, sans-serif;
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000;
-  --header-bg-color: #f0f0f0;
-  --footer-bg-color: #f0f0f0;
-}
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -113,5 +104,4 @@ header, footer {
   --button-hover-bg-color: #5a3f8c;
   --button-hover-text-color: #fff;
 }
-
 </style>

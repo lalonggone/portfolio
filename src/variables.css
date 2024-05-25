@@ -1,0 +1,47 @@
+
+
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000;
+    --header-bg-color-light: #f0f0f0;
+    --footer-bg-color-light: #f0f0f0;
+    --card-bg-color-light: #f9f9f9;
+    --button-bg-color-light: #7a4caf;
+    --button-text-color-light: #fff;
+    --button-hover-bg-color-light: #5a3f8c;
+    --button-hover-text-color-light: #fff;
+
+    --bg-color-dark: #333;
+    --text-color-dark: #fff;
+    --header-bg-color-dark: #444;
+    --footer-bg-color-dark: #444;
+    --card-bg-color-dark: #525252;
+    --button-bg-color-dark: #7a4caf;
+    --button-text-color-dark: #fff;
+    --button-hover-bg-color-dark: #5a3f8c;
+    --button-hover-text-color-dark: #fff;
+}
+
+.light-mode {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --header-bg-color: var(--header-bg-color-light);
+    --footer-bg-color: var(--footer-bg-color-light);
+    --card-bg-color: var(--card-bg-color-light);
+    --button-bg-color: var(--button-bg-color-light);
+    --button-text-color: var(--button-text-color-light);
+    --button-hover-bg-color: var(--button-hover-bg-color-light);
+    --button-hover-text-color: var(--button-hover-text-color-light);
+}
+
+.dark-mode {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --header-bg-color: var(--header-bg-color-dark);
+    --footer-bg-color: var(--footer-bg-color-dark);
+    --card-bg-color: var(--card-bg-color-dark);
+    --button-bg-color: var(--button-bg-color-dark);
+    --button-text-color: var(--button-text-color-dark);
+    --button-hover-bg-color: var(--button-hover-bg-color-dark);
+    --button-hover-text-color: var(--button-hover-text-color-dark);
+}
