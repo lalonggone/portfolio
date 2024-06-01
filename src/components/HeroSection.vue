@@ -1,16 +1,18 @@
 <template>
-  <section class="home-section">
-    <div class="home-content">
-      <h1 class="home-title">Howdy! I'm Laura.</h1>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Howdy! I'm Laura.</h1>
       <p>I'm a passionate space cowgirl software developer specializing in .. blah blah blah... Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nullam nec purus et ante tincidunt aliquam. "You only yolo once".</p>
       <div class="skills-container">
         <h2>My Skills</h2>
-        <TransitionGroup v-if="loaded" name="fade" tag="ul" class="skills-list">
-          <li v-for="(skill, index) in skills" :key="index">
-            {{ skill }}
-          </li>
-        </TransitionGroup>
+        <Transition name="fade">
+          <ul v-if="loaded" class="skills-list">
+            <li v-for="(skill, index) in skills" :key="index">
+              {{ skill }}
+            </li>
+          </ul>
+        </Transition>
       </div>
       <a href="#projects" class="btn-see-my-work">See My Work</a>
     </div>
@@ -21,7 +23,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HomeSection',
+  name: 'HeroSection',
   data() {
     return {
       skills: ['JavaScript', 'React.js', 'PostgreSQL', 'Vue.js', 'TypeScript', 'HTML & CSS', 'SCSS', 'Node.js'],
@@ -37,23 +39,23 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: all 0.5s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(10px);
 }
 
-.home-section {
+.hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
 
-  .home-content {
+  .hero-content {
     flex: 1;
 
-    .home-title {
+    .hero-title {
       font-size: 2.5rem;
       margin: 0;
     }
@@ -82,7 +84,7 @@ export default defineComponent({
     }
   }
 
-  .home-image {
+  .hero-image {
     flex: 1;
 
     img {

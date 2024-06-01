@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header :isDarkMode="isDarkMode" @update:isDarkMode="toggleTheme" />
-      <section id="home">
-        <SimpleExample />
+      <section id="hero">
+        <HeroSection />
       </section>
       <section id="projects">
         <ProjectsSection />
@@ -21,7 +21,7 @@
 import { defineComponent, ref, computed, watch, onMounted } from 'vue';
 import Header from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
-import SimpleExample from './components/SimpleExample.vue';
+import HeroSection from './components/HeroSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import AboutSection from './components/AboutSection.vue';
 import ContactSection from './components/ContactSection.vue';
@@ -31,13 +31,13 @@ export default defineComponent({
   components: {
     Header,
     Footer,
-    SimpleExample,
+    HeroSection,
     ProjectsSection,
     AboutSection,
     ContactSection
   },
   setup() {
-    const isDarkMode = ref(false); 
+    const isDarkMode = ref(true); 
 
     const toggleTheme = (isDark: boolean) => {
       isDarkMode.value = isDark;
@@ -69,17 +69,18 @@ html {
   margin: 0 auto;
   padding: 0 20px 20px;
   font-family: Montserrat, sans-serif;
+  color: var(--text-color);
+  transition: color 0.5s;
 }
 
 body {
   background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
-header, footer {
+/* header, footer {
   background-color: var(--header-bg-color);
   color: var(--text-color);
-}
+} */
 
 .light-mode {
   --bg-color: #ffffff;

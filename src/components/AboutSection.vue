@@ -30,7 +30,7 @@
     align-items: center;
     padding: 50px;
     background-color: var(--bg-color);
-    color: var(--text-color);
+    // color: var(--text-color);
   
     .about-content {
       flex: 1;

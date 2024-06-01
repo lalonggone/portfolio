@@ -83,13 +83,10 @@ export default defineComponent({
       text-decoration: none;
       display: flex;
       align-items: center;
-      //hover pointer 
       cursor: pointer;
     }
 
     .header-name {
-      color: var(--text-color);
-      transition: color .5s;
       font-size: 26px;
     }
   }

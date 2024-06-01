@@ -54,7 +54,6 @@ export default defineComponent({
   margin: 0 auto;
   padding: 50px;
   background-color: var(--bg-color);
-  color: var(--text-color);
   border-radius: 8px;
 
   h1 {
