@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <a href="#home" class="footer-link">Back to Top</a>
+      <a @click="scrollToTop" class="scroll-to-top">take me back to the top</a>
       <div class="social-links">
         <a href="https://github.com/lalonggone" target="_blank" class="social-link">GitHub</a>
         <a href="https://linkedin.com/in/lalonggone" target="_blank" class="social-link">LinkedIn</a>
@@ -18,44 +18,57 @@ export default defineComponent({
   name: 'Footer',
   setup() {
     const currentYear = computed(() => new Date().getFullYear());
-    return { currentYear };
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    return { currentYear, scrollToTop };
   }
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
   padding: 20px;
   text-align: center;
-}
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
-.footer-link {
-  color: var(--footer-text-color);
-  text-decoration: none;
-}
+    .scroll-to-top {
+      color: var(--footer-text-color);
+      text-decoration: none;
+      cursor: pointer;
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+      &:hover,
+      &:focus {
+        color: #aaa;
+      }
+    }
 
-.social-link {
-  color: var(--footer-text-color);
-  margin: 0 10px;
-  text-decoration: none;
-}
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
 
-.footer-text {
-  font-size: 0.8rem;
+      .social-link {
+        color: var(--footer-text-color);
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+    }
+  }
 }
 </style>
