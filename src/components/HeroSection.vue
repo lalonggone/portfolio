@@ -2,28 +2,22 @@
   <section class="hero-section">
     <div class="hero-content">
       <h1 class="hero-title">Hi, I'm Laura.</h1>
-      <p>I'm a freelance web developer </p>
-      <div class="skills-container">
-        <h2>My Skills</h2>
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-
-        <Transition name="fade">
-          <ul v-if="loaded" class="skills-list">
-            <!-- <li v-for="(skill, index) in skills" :key="index">
-              {{ skill }}
-            </li> -->
-          </ul>
-        </Transition>
-      </div>
+      <p class="hero-description">I'm a freelance web developer</p>
       <a href="#projects" class="btn-see-my-work">See My Work</a>
+      <div class="skills-container">
+        <!-- <h2>My Skills</h2> -->
+        <div class="skills-icons">
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="Sass" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
+          <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -33,58 +27,81 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'HeroSection',
-  data() {
-    return {
-      // skills: ['JavaScript', 'React.js', 'PostgreSQL', 'Vue.js', 'TypeScript', 'HTML & CSS', 'SCSS', 'Node.js'],
-      loaded: false
-    }
-  },
-  mounted() {
-    this.loaded = true;
-    // console.log('Skills loaded:', this.skills);
-  }
 });
 </script>
 
 <style lang="scss" scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
+@import '../_variables.scss';
 
 .hero-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 50px;
+
+  @media (min-width: $screen-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
 
   .hero-content {
     flex: 1;
 
     .hero-title {
-      font-size: 4.5rem;
-      margin: 0;
+      font-size: 2.5rem;
+      margin-top: 10vh;
+
+      @media (min-width: $screen-md) {
+        font-size: 4.5rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.5rem;
+      margin-top: 20px;
+
+      @media (min-width: $screen-md) {
+        font-size: 2rem;
+      }
     }
 
     .skills-container {
-      margin-top: 20px;
+      margin: 5vh;
 
-      .skills-icon {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-      }
+      @media (min-width: $screen-sm) {
+            margin: 10vh;
+          }
 
-      .skills-list {
+          @media (min-width: $screen-md) {
+            margin: 20vh;
+          }
+
+      .skills-icons {
         display: flex;
-        list-style-type: none;
-        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        li {
-          padding: 5px 0;
+        .skills-icon {
+          width: 40px;
+          height: 40px;
+          margin: 15px;
+          transition: transform 0.2s;
+
+          @media (min-width: $screen-sm) {
+            width: 60px;
+            height: 60px;
+          }
+
+          @media (min-width: $screen-md) {
+            width: 80px;
+            height: 80px;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -93,21 +110,27 @@ export default defineComponent({
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: #7a4caf;
+      background-color: var(--button-bg-color);
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--button-hover-bg-color);
+        font-weight: bold;
+      }
     }
   }
 
-  .hero-image {
-    flex: 1;
+  // .hero-image {
+  //   flex: 1;
 
-    img {
-      width: 80%;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-    }
-  }
+  //   img {
+  //     width: 100%;
+  //     border-radius: 10px;
+  //     border: 2px solid #ccc;
+  //   }
+  // }
 }
 </style>
