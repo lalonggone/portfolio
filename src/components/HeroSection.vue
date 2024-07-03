@@ -1,11 +1,20 @@
 <template>
   <section class="hero-section">
     <div class="hero-content">
-      <h1 class="hero-title">Howdy! I'm Laura.</h1>
-      <p>I'm a passionate space cowgirl software developer specializing in .. blah blah blah... Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Nullam nec purus et ante tincidunt aliquam. "You only yolo once".</p>
+      <h1 class="hero-title">Hi, I'm Laura.</h1>
+      <p>I'm a freelance web developer </p>
       <div class="skills-container">
         <h2>My Skills</h2>
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+        <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+
         <Transition name="fade">
           <ul v-if="loaded" class="skills-list">
             <li v-for="(skill, index) in skills" :key="index">
@@ -56,14 +65,21 @@ export default defineComponent({
     flex: 1;
 
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 4.5rem;
       margin: 0;
     }
 
     .skills-container {
       margin-top: 20px;
 
+      .skills-icon {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+      }
+
       .skills-list {
+        display: flex;
         list-style-type: none;
         padding: 0;
 
