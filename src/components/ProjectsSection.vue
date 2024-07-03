@@ -3,10 +3,9 @@
         <h1 class="projects-title"> </h1>
         <div class="projects-grid">
             <div class="project-card" v-for="project in projects" :key="project.id">
-                <img :src="project.image" :alt="project.title" class="project-image" />
                 <h2 class="project-title">{{ project.title }}</h2>
                 <p class="project-description">{{ project.description }}</p>
-                <a :href="project.link" target="_blank" class="project-link">View Project</a>
+                <a v-if="project.link" :href="project.link" target="_blank" class="project-link">View Project</a>
             </div>
         </div>
     </section>
@@ -21,45 +20,33 @@ export default defineComponent({
         const projects = ref([
             {
                 id: 1,
-                title: 'Project One',
-                description: 'This is a brief description of project one.',
-                image: 'path/to/image1.jpg',
-                link: 'https://example.com/project1'
+                title: 'Kane Creek Comments',
+                description: 'A full-stack web app that allows users to filter, search and display thousands of survey responses regarding a development in Utah.',
+                link: 'https://kane-creek-comments.vercel.app/'
             },
             {
                 id: 2,
-                title: 'Project Two',
-                description: 'This is a brief description of project two.',
-                image: 'path/to/image2.jpg',
-                link: 'https://example.com/project2'
+                title: 'Travel Tracker',
+                description: 'A dynamic web app that allows users to mangage trips. With an aesthetically pleasing UI, travelers can view their upcoming trips, pending trips, estimate travel costs and book new trips.',
+                link: 'https://github.com/lalonggone/travel-tracker'
             },
             {
                 id: 3,
-                title: 'Project Three',
-                description: 'This is a brief description of project three.',
-                image: 'path/to/image3.jpg',
-                link: 'https://example.com/project3'
+                title: 'Moab Bike Hub',
+                description: 'Coming soon - stay tuned!',
+                // link: 'https://example.com/project3'
             },
             {
                 id: 4,
-                title: 'Project Four',
-                description: 'This is a brief description of project four.',
-                image: 'path/to/image4.jpg',
-                link: 'https://example.com/project4'
+                title: 'Rock Paper Scissors',
+                description: 'A game featuring two modes - classic and EXTREME! Set up to be played against a computer that generates random choices against the user. ',
+                link: 'https://github.com/lalonggone/travel-tracker'
             },
             {
                 id: 5,
-                title: 'Project Five',
-                description: 'This is a brief description of project five.',
-                image: 'path/to/image5.jpg',
-                link: 'https://example.com/project5'
-            },
-            {
-                id: 6,
-                title: 'Project Six',
-                description: 'This is a brief description of project six.',
-                image: 'path/to/image6.jpg',
-                link: 'https://example.com/project6'
+                title: 'KCPD Petition',
+                description: 'Coming soon - stay tuned!',
+                // link: 'https://example.com/project3'
             }
         ]);
 
@@ -107,7 +94,7 @@ export default defineComponent({
             }
 
             .project-description {
-                font-size: 1rem;
+                font-size: .9rem;
                 margin-bottom: 20px;
             }
 

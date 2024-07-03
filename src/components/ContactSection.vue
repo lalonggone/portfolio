@@ -1,20 +1,20 @@
 <template>
   <div class="contact-section">
     <h1>drop me a line</h1>
-    <form @submit.prevent="submitForm">
+    <form action="https://formspree.io/f/meojqgbo" method="POST">
       <div class="form-group">
         <label for="name">name</label>
-        <input type="text" id="name" v-model="form.name" required />
+        <input type="text" name="name" id="name" v-model="form.name" required />
       </div>
       <div class="form-group">
         <label for="email">email</label>
-        <input type="email" id="email" v-model="form.email" required />
+        <input type="email" name="email" id="email" v-model="form.email" required />
       </div>
       <div class="form-group">
         <label for="message">message</label>
-        <textarea id="message" v-model="form.message" required></textarea>
+        <textarea name="message" id="message" v-model="form.message" required></textarea>
       </div>
-      <button className="btn-submit" type="submit">send it</button>
+      <button class="btn-submit" type="submit">send it</button>
     </form>
   </div>
 </template>
@@ -31,18 +31,8 @@ export default defineComponent({
       message: ''
     });
 
-    function submitForm() {
-      console.log('Form submitted:', form.value);
-      form.value = {
-        name: '',
-        email: '',
-        message: ''
-      };
-    };
-
     return {
-      form,
-      submitForm
+      form
     };
   }
 });
@@ -59,10 +49,7 @@ export default defineComponent({
   h1 {
     margin: 40px 0 20px 0;
     font-size: 2em;
-  }
-
-  p {
-    margin-bottom: 20px;
+    color: var(--text-color);
   }
 
   .form-group {
@@ -72,6 +59,7 @@ export default defineComponent({
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
+      color: var(--text-color);
     }
 
     input,
@@ -80,6 +68,8 @@ export default defineComponent({
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      background-color: var(--input-bg-color);
+      color: var(--input-text-color);
     }
 
     textarea {
@@ -92,15 +82,37 @@ export default defineComponent({
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #7a4caf;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #45a049;
+      background-color: var(--button-hover-bg-color);
     }
   }
 }
+
+// /* Light mode variables */
+// .light-mode {
+//   --bg-color: #ffffff;
+//   --text-color: #000;
+//   --input-bg-color: #ffffff;
+//   --input-text-color: #000;
+//   --button-bg-color: #7a4caf;
+//   --button-text-color: #fff;
+//   --button-hover-bg-color: #5a3f8c;
+// }
+
+// /* Dark mode variables */
+// .dark-mode {
+//   --bg-color: #333;
+//   --text-color: #fff;
+//   --input-bg-color: #444;
+//   --input-text-color: #fff;
+//   --button-bg-color: #7a4caf;
+//   --button-text-color: #fff;
+//   --button-hover-bg-color: #5a3f8c;
+// }
 </style>
