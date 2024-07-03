@@ -35,6 +35,18 @@ export default defineComponent({
                 title: 'Moab Bike Hub',
                 description: 'Coming soon - stay tuned!',
                 // link: 'https://example.com/project3'
+            },
+            {
+                id: 4,
+                title: 'Rock Paper Scissors',
+                description: 'A game featuring two modes - classic and EXTREME! Set up to be played against a computer that generates random choices against the user. ',
+                link: 'https://github.com/lalonggone/travel-tracker'
+            },
+            {
+                id: 5,
+                title: 'KCPD Petition',
+                description: 'Coming soon - stay tuned!',
+                // link: 'https://example.com/project3'
             }
         ]);
 

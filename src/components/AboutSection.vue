@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="../assets/your-photo.jpg" alt="Laura Long" class="profile-image" />
+        <!-- <img src="../assets/your-photo.jpg" alt="Laura Long" class="profile-image" /> -->
       </div>
     </section>
   </template>

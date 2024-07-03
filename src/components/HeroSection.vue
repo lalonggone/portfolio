@@ -17,9 +17,9 @@
 
         <Transition name="fade">
           <ul v-if="loaded" class="skills-list">
-            <li v-for="(skill, index) in skills" :key="index">
+            <!-- <li v-for="(skill, index) in skills" :key="index">
               {{ skill }}
-            </li>
+            </li> -->
           </ul>
         </Transition>
       </div>
@@ -35,13 +35,13 @@ export default defineComponent({
   name: 'HeroSection',
   data() {
     return {
-      skills: ['JavaScript', 'React.js', 'PostgreSQL', 'Vue.js', 'TypeScript', 'HTML & CSS', 'SCSS', 'Node.js'],
+      // skills: ['JavaScript', 'React.js', 'PostgreSQL', 'Vue.js', 'TypeScript', 'HTML & CSS', 'SCSS', 'Node.js'],
       loaded: false
     }
   },
   mounted() {
     this.loaded = true;
-    console.log('Skills loaded:', this.skills);
+    // console.log('Skills loaded:', this.skills);
   }
 });
 </script>

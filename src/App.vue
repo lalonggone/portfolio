@@ -77,11 +77,6 @@ body {
   background-color: var(--bg-color);
 }
 
-/* header, footer {
-  background-color: var(--header-bg-color);
-  color: var(--text-color);
-} */
-
 .light-mode {
   --bg-color: #ffffff;
   --text-color: #000;
