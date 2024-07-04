@@ -1,6 +1,6 @@
 <template>
     <section class="projects-section">
-        <h1 class="projects-title"> </h1>
+        <h1 class="projects-title">My Projects</h1>
         <div class="projects-grid">
             <div class="project-card" v-for="project in projects" :key="project.id">
                 <h2 class="project-title">{{ project.title }}</h2>
@@ -27,26 +27,31 @@ export default defineComponent({
             {
                 id: 2,
                 title: 'Travel Tracker',
-                description: 'A dynamic web app that allows users to mangage trips. With an aesthetically pleasing UI, travelers can view their upcoming trips, pending trips, estimate travel costs and book new trips.',
+                description: 'A dynamic web app that allows users to manage trips. With a clean UI, travelers can view their upcoming trips, pending trips, estimate travel costs and book new trips.',
                 link: 'https://github.com/lalonggone/travel-tracker'
             },
             {
                 id: 3,
                 title: 'Moab Bike Hub',
                 description: 'Coming soon - stay tuned!',
-                // link: 'https://example.com/project3'
             },
             {
                 id: 4,
                 title: 'Rock Paper Scissors',
                 description: 'A game featuring two modes - classic and EXTREME! Set up to be played against a computer that generates random choices against the user. ',
-                link: 'https://github.com/lalonggone/travel-tracker'
+                link: 'https://lalonggone.github.io/rockPaperScissors/'
             },
             {
                 id: 5,
-                title: 'KCPD Petition',
-                description: 'Coming soon - stay tuned!',
-                // link: 'https://example.com/project3'
+                title: 'Kane Creek Survey Petition',
+                description: 'A handrolled a petition form serving as a petition against the proposed development in the Colorado River corridor near Moab, Utah.',
+                link: 'https://lalonggone.github.io/kc-comp/index.html'
+            },
+            {
+                id: 6,
+                title: 'Blank',
+                description: 'Coming soon - stay tuned!'
+
             }
         ]);
 
@@ -56,6 +61,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '../_variables.scss';
+
 .projects-section {
     padding: 50px;
     background-color: var(--bg-color);
@@ -64,37 +71,44 @@ export default defineComponent({
     .projects-title {
         text-align: center;
         font-size: 2.5rem;
-        margin: 40px;
+        margin: 40px 0 30px;
     }
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 70px;
+        grid-template-columns: 1fr;
+        gap: 4vh;
 
+        @media (min-width: $screen-sm) {
+            grid-template-columns: repeat(1, 1fr);
+            // margin-top: 50px;
+        }
+        @media (min-width: $screen-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $screen-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
         .project-card {
             background-color: var(--card-bg-color);
             color: var(--text-color);
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
-
-            .project-image {
-                max-width: 100%;
-                height: auto;
-                border-radius: 4px;
-                margin-bottom: 20px;
-            }
-
+            min-width: 250px;
+            max-width: 400px;
+            
             .project-title {
                 font-size: 1.5rem;
                 margin-bottom: 10px;
             }
 
             .project-description {
-                font-size: .9rem;
+                font-size: 0.9rem;
                 margin-bottom: 20px;
             }
 
