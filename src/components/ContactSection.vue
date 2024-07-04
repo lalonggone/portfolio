@@ -93,26 +93,4 @@ export default defineComponent({
     }
   }
 }
-
-// /* Light mode variables */
-// .light-mode {
-//   --bg-color: #ffffff;
-//   --text-color: #000;
-//   --input-bg-color: #ffffff;
-//   --input-text-color: #000;
-//   --button-bg-color: #7a4caf;
-//   --button-text-color: #fff;
-//   --button-hover-bg-color: #5a3f8c;
-// }
-
-// /* Dark mode variables */
-// .dark-mode {
-//   --bg-color: #333;
-//   --text-color: #fff;
-//   --input-bg-color: #444;
-//   --input-text-color: #fff;
-//   --button-bg-color: #7a4caf;
-//   --button-text-color: #fff;
-//   --button-hover-bg-color: #5a3f8c;
-// }
 </style>
