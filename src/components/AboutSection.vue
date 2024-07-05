@@ -1,7 +1,7 @@
 <template>
     <section class="about-section">
       <div class="about-content">
-        <h1 class="about-title">About Me</h1>
+        <h1 class="about-title">A little bit about me</h1>
         <p class="about-description">
           Hello! I'm Laura, a passionate software developer with a love for creating innovative solutions. With a background in XYZ and experience in various technologies such as JavaScript, Vue.js, and more, I am always eager to take on new challenges and learn new skills.
         </p>
@@ -10,7 +10,6 @@
         </p>
       </div>
       <div class="about-image">
-        <!-- <img src="../assets/your-photo.jpg" alt="Laura Long" class="profile-image" /> -->
       </div>
     </section>
   </template>
@@ -29,8 +28,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    padding-top: 15vh;
     background-color: var(--bg-color);
-    // color: var(--text-color);
   
     .about-content {
       flex: 1;
@@ -38,7 +37,7 @@
   
       .about-title {
         font-size: 2.5rem;
-        margin: 40px;
+        margin: 40px 0 30px;
       }
   
       .about-description {

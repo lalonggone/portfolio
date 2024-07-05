@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo-container">
       <a @click="scrollToTop" class="scroll-to-top">
-        <img src="../assets/LL Logo.jpg" alt="Logo" class="logo">
+        <!-- <img src="../assets/LL Logo.jpg" alt="Logo" class="logo"> -->
         <span class="header-name"> < LauraLong /> </span>
       </a>
     </div>
@@ -61,14 +61,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
 .header {
   position: sticky;
-  top: 10px;
-  background-color: var(--header-bg-color);
+  top: 20px;
+  background-color: var(--navbar-bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 20px;
+  z-index: 10;
 
   .logo-container {
     display: flex;
@@ -113,11 +115,11 @@ export default defineComponent({
         .nav-link {
           text-decoration: none;
           color: var(--text-color);
-          transition: color 0.5s;
+          transition: color 0.3s;
 
           &:hover,
           &:focus {
-            color: #aaa;
+            color: #a4a4a4;
           }
         }
       }

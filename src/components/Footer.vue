@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <a @click="scrollToTop" class="scroll-to-top">take me back to the top</a>
+      <!-- <a @click="scrollToTop" class="scroll-to-top">back to the top</a> -->
       <div class="social-links">
         <a href="https://github.com/lalonggone" target="_blank" class="social-link">GitHub</a>
         <a href="https://linkedin.com/in/lalonggone" target="_blank" class="social-link">LinkedIn</a>
@@ -63,7 +63,12 @@ export default defineComponent({
         color: var(--footer-text-color);
         margin: 0 10px;
         text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: #aaa;
       }
+    }
     }
 
     .footer-text {

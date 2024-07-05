@@ -60,6 +60,8 @@ export default defineComponent({
 </script>
 
 <style>
+@import '_variables.scss';
+
 html {
   scroll-behavior: smooth;
 }
@@ -70,34 +72,10 @@ html {
   padding: 0 20px 20px;
   font-family: Montserrat, sans-serif;
   color: var(--text-color);
-  transition: color 0.5s;
+  transition: color 1.5s;
 }
 
 body {
   background-color: var(--bg-color);
-}
-
-.light-mode {
-  --bg-color: #ffffff;
-  --text-color: #000;
-  --header-bg-color: #f0f0f0;
-  --footer-bg-color: #f0f0f0;
-  --card-bg-color: #f9f9f9;
-  --button-bg-color: #7a4caf;
-  --button-text-color: #fff;
-  --button-hover-bg-color: #5a3f8c;
-  --button-hover-text-color: #fff;
-}
-
-.dark-mode {
-  --bg-color: #333;
-  --text-color: #fff;
-  --header-bg-color: #444;
-  --footer-bg-color: #444;
-  --card-bg-color: #525252;
-  --button-bg-color: #7a4caf;
-  --button-text-color: #fff;
-  --button-hover-bg-color: #5a3f8c;
-  --button-hover-text-color: #fff;
 }
 </style>
