@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <a @click="scrollToTop" class="scroll-to-top">back to the top</a>
+      <!-- <a @click="scrollToTop" class="scroll-to-top">back to the top</a> -->
       <div class="social-links">
         <a href="https://github.com/lalonggone" target="_blank" class="social-link">GitHub</a>
         <a href="https://linkedin.com/in/lalonggone" target="_blank" class="social-link">LinkedIn</a>
@@ -45,7 +45,6 @@ export default defineComponent({
 
     .scroll-to-top {
       color: var(--footer-text-color);
-      transition: color 0.5s;
       text-decoration: none;
       cursor: pointer;
 
@@ -64,7 +63,6 @@ export default defineComponent({
         color: var(--footer-text-color);
         margin: 0 10px;
         text-decoration: none;
-        transition: color 0.5s;
 
         &:hover,
         &:focus {

@@ -72,7 +72,7 @@ html {
   padding: 0 20px 20px;
   font-family: Montserrat, sans-serif;
   color: var(--text-color);
-  transition: color 0.5s;
+  transition: color 1.5s;
 }
 
 body {

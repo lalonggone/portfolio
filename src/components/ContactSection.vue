@@ -42,14 +42,16 @@ export default defineComponent({
 .contact-section {
   max-width: 600px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 80px 70px 150px 80px;
   background-color: var(--bg-color);
   border-radius: 8px;
+  color: var(--text-color);
+  transition: color 1.5s;
 
   h1 {
     margin: 40px 0 20px 0;
     font-size: 2em;
-    color: var(--text-color);
+    // color: var(--text-color);
   }
 
   .form-group {
@@ -59,7 +61,7 @@ export default defineComponent({
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
-      color: var(--text-color);
+      // color: var(--text-color);
     }
 
     input,
