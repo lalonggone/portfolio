@@ -3,8 +3,8 @@
     <div class="hero-content">
       <h1 class="hero-title">Hi, I'm Laura.</h1>
       <p class="hero-description">I'm a freelance web developer.</p>
-      <a href="#projects" class="btn-my-work">My Work</a>
-      <a href="#projects" class="btn-my-resume">My Resume</a>
+      <a href="#projects" class="btn-my-work">See my work</a>
+      <a href="#projects" class="btn-my-resume">Take a resume</a>
       <div class="skills-container">
         <div class="skills-icons">
           <div class="skill-wrapper">
@@ -66,6 +66,7 @@ export default defineComponent({
   align-items: center;
   text-align: center;
   padding: 50px;
+  margin-bottom: 20vh;
   
   @media (min-width: $screen-sm) {
     flex-direction: row;
@@ -167,6 +168,7 @@ export default defineComponent({
             opacity: 0;
             transition: opacity 0.2s;
             pointer-events: none;
+            z-index: 1;
           }
 
           &:hover .skill-label {
