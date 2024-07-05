@@ -43,6 +43,18 @@
             <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" />
             <span class="skill-label">Node.js</span>
           </div>
+          <div class="skill-wrapper">
+            <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+            <span class="skill-label">Git</span>
+          </div>
+          <div class="skill-wrapper">
+            <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="ViteJS" />
+            <span class="skill-label">ViteJS</span>
+          </div>
+          <div class="skill-wrapper">
+            <img class="skills-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" alt="Webpack" />
+            <span class="skill-label">Webpack</span>
+          </div>
         </div>
       </div>
     </div>
@@ -105,11 +117,12 @@ export default defineComponent({
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
-    
+      
+      
       @media (min-width: $screen-sm) {
         width: 140px;
       }
-    
+      
       &:hover {
         background-color: var(--button-hover-bg-color);
       }

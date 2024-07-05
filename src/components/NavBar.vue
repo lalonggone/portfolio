@@ -2,7 +2,6 @@
   <header class="header">
     <div class="logo-container">
       <a @click="scrollToTop" class="scroll-to-top">
-        <!-- <img src="../assets/LL Logo.jpg" alt="Logo" class="logo"> -->
         <span class="header-name"> < LauraLong /> </span>
       </a>
     </div>

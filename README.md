@@ -1,9 +1,26 @@
-# Vue 3 + TypeScript + Vite
+# Laura Long's Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Welcome to my portfolio! This project showcases my skills, projects, and resume as a web developer.
 
-## Recommended Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+- **Home Section**: Introduction and brief overview showcasing skills.
+- **Projects Section**: Display of various projects with links to live sites and repositories.
+- **About Section**: Information about me and my background.
+- **Contact Section**: A form to get in touch with me, integrated with Formspree.
+- **Dark Mode**: Toggle between light and dark themes.
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+## Technologies Used
+
+- **Vue.js**
+- **TypeScript**
+- **SCSS**
+- **Vite**
+
+## Contact
+
+Feel free to reach out to me via the contact form on my portfolio or through the following channels:
+
+- **Email**: lauralonggone@gmail.com
+- **LinkedIn**: [Laura Long](https://linkedin.com/in/lauralonggone)
+- **GitHub**: [lalonggone](https://github.com/lalonggone)
