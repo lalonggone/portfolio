@@ -45,14 +45,21 @@
           title: 'Rock Paper Scissors',
           description: 'A game featuring two modes - classic and EXTREME! Set up to be played against a computer that generates random choices against the user.',
           liveLink: 'https://rock-paper-scissors.vercel.app/',
-          sourceCode: 'https://github.com/lalonggone/rock-paper-scissors'
+          sourceCode: 'https://github.com/lalonggone/rockPaperScissors'
         },
         {
           id: 5,
           title: 'Kane Creek Survey',
-          description: 'A handrolled form serving as a petition against the proposed development in the Colorado River corridor near Moab, Utah.',
+          description: 'A handrolled form written in vanilla JS serving as a mock petition against the proposed development in the Colorado River corridor near Moab, Utah.',
           liveLink: 'https://lalonggone.github.io/kc-comp/index.html',
           sourceCode: 'https://github.com/lalonggone/kcpd-petition'
+        },
+        {
+          id: 6,
+          title: 'Blank',
+          description: 'Coming soon - stay tuned!',
+          liveLink: '',
+          sourceCode: ''
         }
       ]);
   

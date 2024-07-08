@@ -75,6 +75,11 @@ html {
   transition: color 1.5s;
 }
 
+button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 body {
   background-color: var(--bg-color);
 }
