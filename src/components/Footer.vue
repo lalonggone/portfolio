@@ -32,7 +32,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .footer {
-  background-color: var(--footer-bg-color);
+  // background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
   padding: 20px;
   text-align: center;
