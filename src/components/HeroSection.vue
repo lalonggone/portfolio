@@ -4,7 +4,7 @@
       <h1 class="hero-title">Hi, I'm Laura.</h1>
       <p class="hero-description">I'm a freelance web developer.</p>
       <a href="#projects" class="btn-my-work">See my work</a>
-      <!-- <a href="#projects" class="btn-my-resume">Take a resume</a> -->
+      <a href="#projects" class="btn-my-resume">Take a resume</a>
       <div class="skills-container">
         <div class="skills-icons">
           <div class="skill-wrapper">
@@ -110,6 +110,7 @@ export default defineComponent({
     .btn-my-work,
     .btn-my-resume {
       display: inline-block;
+      font-weight: 500;
       margin: 20px;
       padding: 10px;
       background-color: var(--button-bg-color);

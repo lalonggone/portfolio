@@ -22,14 +22,14 @@
         {
           id: 1,
           title: 'Kane Creek Comments',
-          description: 'A full-stack web app that allows users to filter, search, and display thousands of survey responses regarding a development in Utah.',
+          description: 'A full-stack React app that allows users to filter, search, and display thousands of survey responses regarding a development in Utah.',
           liveLink: 'https://kane-creek-comments.vercel.app/',
           sourceCode: 'https://github.com/lalonggone/kane-creek-comments-fe'
         },
         {
           id: 2,
           title: 'Travel Tracker',
-          description: 'An app that allows users to login and manage trips. The user can view upcoming and pending trips, estimate costs, and book new trips. Written in vanilla Javascript!',
+          description: 'An app that allows users to login and manage trips. The user can view upcoming and pending trips, estimate costs, and book new trips. Written in vanilla JS.',
           liveLink: '',
           sourceCode: 'https://github.com/lalonggone/travel-tracker'
         },
@@ -38,13 +38,13 @@
           title: 'Moab Bike Hub',
           description: 'Coming soon - stay tuned!',
           liveLink: '',
-          sourceCode: 'https://github.com/lalonggone/moab-bike-hub'
+          sourceCode: 'https://github.com/lalonggone/moab-bike-app-frontend'
         },
         {
           id: 4,
           title: 'Rock Paper Scissors',
           description: 'A game featuring two modes - classic and EXTREME! Set up to be played against a computer that generates random choices against the user.',
-          liveLink: 'https://rock-paper-scissors.vercel.app/',
+          liveLink: 'https://lalonggone.github.io/rockPaperScissors/',
           sourceCode: 'https://github.com/lalonggone/rockPaperScissors'
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           id: 6,
-          title: 'Blank',
+          title: 'Kane Creek InfoBot ',
           description: 'Coming soon - stay tuned!',
           liveLink: '',
           sourceCode: ''
