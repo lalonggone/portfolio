@@ -68,10 +68,8 @@ export default defineComponent({
     textarea {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 2px solid #ccc;
       border-radius: 4px;
-      background-color: var(--input-bg-color);
-      color: var(--input-text-color);
     }
 
     textarea {
@@ -86,6 +84,7 @@ export default defineComponent({
     padding: 10px 20px;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
+    font-weight: 500;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;

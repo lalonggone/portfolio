@@ -32,7 +32,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .footer {
-  // background-color: var(--footer-bg-color);
+  background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
   padding: 20px;
   text-align: center;
@@ -43,16 +43,16 @@ export default defineComponent({
     align-items: center;
     gap: 10px;
 
-    .scroll-to-top {
-      color: var(--footer-text-color);
-      text-decoration: none;
-      cursor: pointer;
+    // .scroll-to-top {
+    //   color: var(--footer-text-color);
+    //   text-decoration: none;
+    //   cursor: pointer;
 
-      &:hover,
-      &:focus {
-        color: #aaa;
-      }
-    }
+    //   &:hover,
+    //   &:focus {
+    //     color: #aaa;
+    //   }
+    // }
 
     .social-links {
       display: flex;
